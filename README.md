@@ -6,4 +6,4 @@ When Press button search
 Then Header search snippet “1” text equals “Adsterra”
 
 ВАРИАНТ2
-Использовались maven,cucumber, SELENIUM. без пейджобджектов
+Использовались maven,cucumber, Selenium Grid. без пейджобджектов
