@@ -18,20 +18,20 @@ public class GooglePage {
     public void open_url(String s){
         driver.get(s);}
 
-    //ждать обновления страницы
+    //Р¶РґР°С‚СЊ РѕР±РЅРѕРІР»РµРЅРёСЏ СЃС‚СЂР°РЅРёС†С‹
     public void wait_for_smthng(){
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
-    //ввести текст в окно запроса
+    //РІРІРµСЃС‚Рё С‚РµРєСЃС‚ РІ РѕРєРЅРѕ Р·Р°РїСЂРѕСЃР°
     public void search_input(String daString) {
         driver.findElement(By.id("lst-ib")).sendKeys(daString);
     }
-    //нажать кнопку "поиск"
+    //РЅР°Р¶Р°С‚СЊ РєРЅРѕРїРєСѓ "РїРѕРёСЃРє"
     public void press_search (){
         driver.findElement(By.xpath(".//*[@id='sblsbb']/button")).click();
     }
 
-    // найти n-ый блок(сниппет) в списке результатов поиска
+    // РЅР°Р№С‚Рё n-С‹Р№ Р±Р»РѕРє(СЃРЅРёРїРїРµС‚) РІ СЃРїРёСЃРєРµ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РїРѕРёСЃРєР°
     public WebElement get_snippet(String n){
         WebElement snippet = driver.findElements(By.xpath(".//*[@id='rso']/*/*/div/h3/a")).get(Integer.parseInt(n) - 1);
         return snippet;
